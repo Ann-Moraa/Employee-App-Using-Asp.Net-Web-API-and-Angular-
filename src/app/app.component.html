@@ -1,0 +1,13 @@
+<div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="topnav">
+    <a class="active" (click)="navigateToHome()"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a routerLink="news" (click)="navigateToNews()"><i class="fa fa-fw fa-search"></i>News</a>
+    <a routerLink="contact" (click)="navigateToContact()"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+    <a routerLink="about" (click)="navigateToShowEmployees()">Show Employees</a>
+  </div>
+  <br />
+  <br />
+  
+</div>
+<router-outlet></router-outlet>

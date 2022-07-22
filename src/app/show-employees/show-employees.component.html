@@ -1,0 +1,32 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Date Of Birth</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of empList">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.salary}}</td>
+            <td>{{employee.date}}</td>
+            <td>
+                <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+                    data-bs-target="#editEmployee" (click)="editEmployee(employee)">Edit</button>
+                <button type="button" class="btn btn-outline-danger"
+                    (click)="deleteEmployee(employee)">Delete</button>
+            </td>
+
+        </tr>
+
+    </tbody>
+</table>
+
+
+<router-outlet></router-outlet>
